@@ -10,4 +10,8 @@ router.get('/menu', function(req, res, next) {
   res.render('menu');
 });
 
+router.get('/hours', function(req, res, next) {
+	res.render('hours');
+})
+
 module.exports = router;
