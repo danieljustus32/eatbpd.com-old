@@ -38,7 +38,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// setting our routes
-app.get('/', function(req, res){
-	res.render('index');
-});
+module.exports = app;
