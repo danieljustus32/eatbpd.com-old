@@ -9,15 +9,10 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-      div#title-bar
-        p BPD  
-    nav
-      button.nav-button Home
-        a.nav-link(href='/')
-      button.nav-button Menu
-        a.nav-link(href='/menu')
-      button.nav-button Hours & Location
-        a.nav-link(href='/hours')
+        nav
+          a.nav-button.btn.btn-primary(href='/') Home
+          a.nav-button.btn.btn-primary(href='/menu') Menu
+          a.nav-button.btn.btn-primary(href='/hours') Hours & Location
     block content
     footer
       || &copy; 2019 |
