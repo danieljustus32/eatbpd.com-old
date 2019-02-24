@@ -9,9 +9,14 @@ html
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
   body
     header
+      div#title-bar  
     nav
-      a.nav-button(href='/') Home
-      a.nav-button(href='/menu') Menu
-      a.nav.button(href='/hours') Hours & Location
+      button.nav-button Home
+        a.nav-link(href='/')
+      button.nav-button Menu
+        a.nav-link(href='/menu')
+      button.nav-button Hours & Location
+        a.nav-link(href='/hours')
     block content
     footer
+      || &copy; 2019 |
