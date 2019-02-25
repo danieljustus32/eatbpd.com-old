@@ -8,6 +8,10 @@ a {
 	color: #00B7FF;
 }
 
+h1 {
+	margin-bottom: 3%
+}
+
 header {
 	background: rgb(37,36,42);
 	background: -moz-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(10,8,38,1) 45%, rgba(12,18,64,0.8729691705783876) 100%);
