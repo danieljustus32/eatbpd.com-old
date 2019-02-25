@@ -1,4 +1,5 @@
 extends layout
+include mixins/maps.pug
 
 block content
   main
@@ -25,4 +26,5 @@ block content
       tr
         td.day Saturday
         td.hours 8am - 8pm
+    +google-map-place("ChIJb47bNRlUkFQRhlkA1DvHHh4", key)
   

@@ -81,6 +81,9 @@ footer {
 	float: right;
 }
 
+#map {
+	margin-top: 10%;
+}
 
 /* Responsive styles */
 
