@@ -68,6 +68,19 @@ footer {
 	display: none;
 }
 
+#hours-table {
+	width: 35%;
+}
+
+.day {
+	display: inline;
+}
+
+.hours {
+	display: inline;
+	float: right;
+}
+
 
 /* Responsive styles */
 
@@ -96,6 +109,10 @@ footer {
 		position: relative;
 		width: 2rem;
 		
+	}
+
+	#hours-table {
+		width: 100%
 	}
 }
 
