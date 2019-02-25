@@ -9,10 +9,11 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-        nav
-          a.nav-button.btn.btn-primary(href='/') Home
-          a.nav-button.btn.btn-primary(href='/menu') Menu
-          a.nav-button.btn.btn-primary(href='/hours') Hours & Location
+      img#logo(src="/image/logo.png" alt="Brown\'s Point Diner")
+      nav
+        a.nav-button.btn.btn-primary(href='/') Home
+        a.nav-button.btn.btn-primary(href='/menu') Menu
+        a.nav-button.btn.btn-primary(href='/hours') Hours & Location
     block content
     footer
       || &copy; 2019 |

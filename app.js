@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// GET /public/logo.png etc.
+
 app.use('/', mainRouter);
 app.use('/menu', mainRouter);
 app.use('/users', mainRouter);
