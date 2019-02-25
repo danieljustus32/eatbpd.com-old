@@ -87,7 +87,7 @@ footer {
 	}
 
 	#hamburger-button {
-		background: url('../svg/bars-solid.svg');
+		background: url('../image/bars-solid.png');
 		display: inline-block;
 		height: 2rem;
 		top: 5%;
@@ -96,5 +96,21 @@ footer {
 		position: relative;
 		width: 2rem;
 		
+	}
+}
+
+@media only screen and (min-width: 381px, max-width: 650px) {
+
+	
+}
+
+@media only screen and (max-width: 380px) {
+
+	header {
+		height: 3rem;
+	}
+
+	h1 {
+		margin-top: 3.5rem;
 	}
 }
