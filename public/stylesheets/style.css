@@ -69,6 +69,7 @@ footer {
 }
 
 #hours-table {
+	margin-bottom: 5%;
 	width: 35%;
 }
 
@@ -79,10 +80,6 @@ footer {
 .hours {
 	display: inline;
 	float: right;
-}
-
-#map {
-	margin-top: 10%;
 }
 
 /* Responsive styles */
