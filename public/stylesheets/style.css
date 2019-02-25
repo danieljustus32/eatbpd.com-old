@@ -87,10 +87,12 @@ footer {
 	}
 
 	#hamburger-button {
-		background: url('../image/bars-solid.png');
+		background: url('../svg/ellipsis-v-solid.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		border: none;
 		display: inline-block;
 		height: 2rem;
-		top: 5%;
 		left: -10%;
 		padding: 25%;
 		position: relative;
