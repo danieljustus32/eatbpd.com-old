@@ -1,5 +1,8 @@
+const credentials = require('../config/credentials.js');
+
 var express = require('express');
 var router = express.Router();
+var api = credentials.api;
 
 // GET home page. //
 router.get('/', function(req, res, next) {
@@ -11,7 +14,7 @@ router.get('/menu', function(req, res, next) {
 });
 
 router.get('/hours', function(req, res, next) {
-	res.render('hours');
+	res.render('hours', { key: api });
 })
 
 module.exports = router;
