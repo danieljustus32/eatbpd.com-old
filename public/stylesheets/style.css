@@ -18,8 +18,8 @@ header {
 	background: -webkit-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(10,8,38,1) 45%, rgba(12,18,64,0.8729691705783876) 100%);
 	background: linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(10,8,38,1) 45%, rgba(12,18,64,0.8729691705783876) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25242a",endColorstr="#0c1240",GradientType=1);	display: inline-block;
-	height: 20vh;
-	width: 100vw;
+	height: 15%;
+	width: 100%;
 	padding: 1%;
 }
 nav {
@@ -42,7 +42,7 @@ footer {
 	width: 45vw;
 }
 
-.nav-button {
+.btn-primary {
 	background-color: #141e2d;
 	border-color: #141e2d;
 	border-radius: 2px;
@@ -53,4 +53,25 @@ footer {
 	background-color: #3b557c;
 	border: 1px solid white;
 
+}
+
+.hamburger-button {
+	display: none;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 650px) {
+	#logo {
+		height: auto;
+		width: 85%;
+	}
+
+	.nav-button {
+		display: none;
+	}
+
+	.hamburger-button {
+		display: inline-block;
+	}
 }
