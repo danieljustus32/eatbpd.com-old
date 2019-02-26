@@ -4,32 +4,52 @@
 }
 
 #column-left {
-	padding: 0 1rem;
+	padding: 0 0.6rem;
 }
 
+.yelp-review {
+	width: auto;
+	overflow-y: hidden;
+}
 
-.callout {
-	padding: 7%;
-	background-color: lightgreen;
+.card {
+	box-sizing: border-box;
+	border: 1px solid grey;
+	-webkit-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	border-radius: 5px;
 	margin-bottom: 5%;
+	overflow: auto;
+	z-index: -1;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 950px) {
 	#column-layout {
 		display: flex;
 		justify-content: space-between;
 	}
 
 	#column-left {
-		flex: 2;
+		flex: 3;
 	}
 
 	#column-right {
-		flex: 1;
+		flex: 2;
 		flex-direction: column;
 	}
 
 	.callout {
-		flex: 1;
+		flex: 2;
+	}
+}
+
+/* Rules for phones and small devices. We hide the yelp-review 
+cards at this screen size because they scroll overflow and 
+nobody wants that ;) */
+
+@media only screen and (max-width: 476px) {
+	.card {
+		display: none;
 	}
 }
