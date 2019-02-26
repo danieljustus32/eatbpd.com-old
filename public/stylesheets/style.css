@@ -10,7 +10,6 @@ a {
 
 h1 {
 	margin-bottom: 3%;
-	margin-top: 4rem;
 }
 
 header {
@@ -23,9 +22,9 @@ header {
 	padding: 1%;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 }
 nav {
-	display: inline;
 	float: right;
 }
 
@@ -66,6 +65,10 @@ footer {
 
 #hamburger-button {
 	display: none;
+}
+
+.page-content {
+	margin-top: 4rem;
 }
 
 #hours-table {

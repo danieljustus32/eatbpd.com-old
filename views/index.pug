@@ -2,10 +2,37 @@ extends layout
 
 block content
   main
-    h1= "Join us in Beautiful Brown's Point"
-    p 
-      | As longtime residents of this wonderful community, our #1 goal has been to create an
-      | inviting place to catch up with our friends and neighbors while enjoying fresh, wholesome, in
-      | house cooking. We are proud to serve fresh local quality ingredients, such as farm fresh eggs
-      | and produce. All of our food is prepared in the healthiest way possible; we only use olive oil
-      | for our cooking requirements and soy oil in our deep-fryers.
+    section.page-content
+      div#column-layout
+        div#column-left
+          h1= "Join us in Beautiful Brown's Point"
+          p 
+            | As longtime residents of this wonderful community, our #1 goal has been to create an
+            | inviting place to catch up with our friends and neighbors while enjoying fresh, wholesome, in
+            | house cooking. We are proud to serve fresh local quality ingredients, such as farm fresh eggs
+            | and produce. All of our food is prepared in the healthiest way possible; we only use olive oil
+            | for our cooking requirements and soy oil in our deep-fryers.
+          div#pie-wrapper
+            img#pie(src="/image/bay-6.jpeg" alt="An image of a fresh-baked apple pie")
+        div#column-right  
+          div.card 
+            span(class="yelp-review" data-review-id="EaVPFVw_pprROdlflV2CXw" data-hostname="www.yelp.com") Read 
+              a(href="https://www.yelp.com/user_details?userid=L_6pSThB8_c7_EZ5QZhsrg" rel="nofollow noopener") Tom A.'s 
+              a( href="https://www.yelp.com/biz/browns-point-diner-tacoma-2?hrid=EaVPFVw_pprROdlflV2CXw" rel="nofollow noopener") review of 
+              a(href="https://www.yelp.com/biz/ZUqffyg2CaVgzKZvXH5kig" rel="nofollow noopener") Brown's Point Diner on 
+              a(href="https://www.yelp.com" rel="nofollow noopener") Yelp
+          div.card
+            span(class="yelp-review" data-review-id="aL6koj-ROk4-4UNnOUmE5g" data-hostname="www.yelp.com") Read 
+              a(href="https://www.yelp.com/user_details?userid=XgRX0JeFkrLg0ReLUsh2jQ" rel="nofollow noopener") Julie F.'s 
+              a(href="https://www.yelp.com/biz/browns-point-diner-tacoma-2?hrid=aL6koj-ROk4-4UNnOUmE5g" rel="nofollow noopener") review of 
+              a(href="https://www.yelp.com/biz/ZUqffyg2CaVgzKZvXH5kig" rel="nofollow noopener") Brown's Point Diner on 
+              a(href="https://www.yelp.com" rel="nofollow noopener") Yelp
+          div.card  
+            div(class="zomato-review-wrapper" style="width:auto;height:auto;")
+              a(href="https://www.zomato.com/tacoma-wa/browns-point-diner-tacoma?utm_medium=engagement_badge&utm_campaign=widget-business&utm_source=referral-widget-16725423" target="_blank")
+                img(src="https://www.zomato.com/widgets/res_widget_img.php?badge_color=red&widget_type=customised_badge&res_id=16725423&badge_text=Review us on Zomato")
+            div(class="zomato-widget-wrapper" style="width:auto;height:auto;")
+              a(href="https://www.zomato.com/tacoma-wa/browns-point-diner-tacoma?utm_source=referral-widget-16725423&utm_medium=review_badge&utm_campaign=widget-business" target="_blank")
+                img(src="https://www.zomato.com/widgets/review_badge?badge_type=rating_large&res_id=16725423&widget_lang=en")
+  link(rel="stylesheet" href="/stylesheets/index.css" type="text/css")
+  script(async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript")
