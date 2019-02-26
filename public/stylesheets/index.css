@@ -1,5 +1,35 @@
 /* styles for index page main content go here */
 
-.content-wrapper {
-	display: flex;
+#column-layout {
+}
+
+#column-left {
+	padding: 0 1rem;
+}
+
+
+.callout {
+	padding: 7%;
+	background-color: lightgreen;
+	margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 900px) {
+	#column-layout {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#column-left {
+		flex: 2;
+	}
+
+	#column-right {
+		flex: 1;
+		flex-direction: column;
+	}
+
+	.callout {
+		flex: 1;
+	}
 }

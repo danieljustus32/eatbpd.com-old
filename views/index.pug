@@ -3,11 +3,27 @@ extends layout
 block content
   main
     section.page-content
-      div.contentwrapper
-        h1= "Join us in Beautiful Brown's Point"
-        p 
-          | As longtime residents of this wonderful community, our #1 goal has been to create an
-          | inviting place to catch up with our friends and neighbors while enjoying fresh, wholesome, in
-          | house cooking. We are proud to serve fresh local quality ingredients, such as farm fresh eggs
-          | and produce. All of our food is prepared in the healthiest way possible; we only use olive oil
-          | for our cooking requirements and soy oil in our deep-fryers.
+      div#column-layout
+        div#column-left
+          h1= "Join us in Beautiful Brown's Point"
+          p 
+            | As longtime residents of this wonderful community, our #1 goal has been to create an
+            | inviting place to catch up with our friends and neighbors while enjoying fresh, wholesome, in
+            | house cooking. We are proud to serve fresh local quality ingredients, such as farm fresh eggs
+            | and produce. All of our food is prepared in the healthiest way possible; we only use olive oil
+            | for our cooking requirements and soy oil in our deep-fryers.
+        div#column-right  
+          div.callout 
+            h2= "Callout"
+            p 
+              | Wristwatch boat corrupted rain office pre-franchise geodesic Tokyo military-grade neon gang footage hacker jeans 
+              | silent. Monofilament pre-numinous dome plastic Chiba stimulate silent corrupted pistol engine sprawl. Wristwatch 
+              | physical artisanal marketing 3D-printed pistol silent long-chain hydrocarbons hacker table faded office. 
+          div.callout  
+            h2= "Callout"
+            p 
+              | Wristwatch boat corrupted rain office pre-franchise geodesic Tokyo military-grade neon gang footage hacker jeans 
+              | silent. Monofilament pre-numinous dome plastic Chiba stimulate silent corrupted pistol engine sprawl. Wristwatch 
+              | physical artisanal marketing 3D-printed pistol silent long-chain hydrocarbons hacker table faded office. 
+
+  link(rel="stylesheet" href="/stylesheets/index.css" type="text/css")
