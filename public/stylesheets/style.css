@@ -45,7 +45,8 @@ footer {
 	display: flex;
 	justify-content: right;
 	margin-right: 2%;
-	padding-bottom: 0.5%%;
+	padding-bottom: 0.5%;
+	max-height: auto;
 }
 
 #logo {
@@ -112,13 +113,13 @@ footer {
 		background-repeat: no-repeat;
 		background-position: center;
 		border: none;
-		display: inline-block;
-		height: 2rem;
+		display: flex;
 		left: -10%;
 		padding: 25%;
 		position: relative;
-		width: 2rem;
-		margin: 0 auto;
+		height: auto;
+		width: auto;
+		margin: auto 0;
 	}
 }
 
