@@ -44,14 +44,10 @@ footer {
     width: 40vw;
 	display: flex;
 	justify-content: right;
-<<<<<<< HEAD
 	margin-right: 2%;
 	padding-bottom: 0.5%;
 	max-height: auto;
-=======
 	padding-bottom: 0.5%;
-	
->>>>>>> 06d6c24728ecb6c44ed1c0a75a8a50837e67982c
 }
 
 #logo {
@@ -88,6 +84,20 @@ footer {
 .page-content {
 	margin-top: 10rem;
 	transition: 0.5s;
+}
+
+#footer-wrapper {
+	background: #282d35;
+	border-top: 1px solid grey;
+	display: flex;
+	min-height: 8rem;
+}
+
+#footer-text {
+	z-index: 2;
+	flex: 1;
+	color: #b7b9bc;
+	margin: auto 0;
 }
 
 #hours-table {
