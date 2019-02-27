@@ -34,8 +34,8 @@
 	border-radius: 5px;
 	margin-bottom: 5%;
 	overflow: auto;
-	display: flex;
 	justify-content: center;
+	z-index: -1;
 }
 
 .zomato-review-wrapper {
