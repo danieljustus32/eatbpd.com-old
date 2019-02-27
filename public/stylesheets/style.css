@@ -13,8 +13,9 @@ h1 {
 }
 
 main {
-	padding: 8%;
+	padding: 2%;
 }
+
 footer {
 	height: 20%;
 	margin: auto;
@@ -75,7 +76,8 @@ footer {
 }
 
 .page-content {
-	margin-top: 4rem;
+	margin-top: 10rem;
+	transition: 0.5s;
 }
 
 #hours-table {
@@ -95,6 +97,10 @@ footer {
 /* Responsive styles */
 
 @media only screen and (max-width: 810px) {
+
+	.page-content {
+		margin-top: 6rem;
+	}
 
 	#header-wrapper {
 		height: 3.5rem;
@@ -147,6 +153,10 @@ footer {
 
 	h1 {
 		margin-top: 3.5rem;
+	}
+
+	.page-content {
+		margin-top: 4rem;
 	}
 
 	#header-wrapper {
