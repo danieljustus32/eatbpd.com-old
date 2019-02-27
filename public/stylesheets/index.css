@@ -1,0 +1,81 @@
+/* styles for index page main content go here */
+
+#column-layout {
+}
+
+#column-left {
+	padding: 0 0.6rem;
+}
+
+
+#pie {
+	-webkit-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	display: block;
+	width: 45vw;
+	height: auto;
+	margin: 1rem auto 3rem;
+	border-radius: 5px;
+}
+
+.yelp-review {
+	width: auto;
+	overflow-y: hidden;
+}
+
+.card {
+	box-sizing: border-box;
+	border: 1px solid grey;
+	display: flex;
+	-webkit-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	border-radius: 5px;
+	margin-bottom: 5%;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.zomato-review-wrapper {
+	display: block;
+	margin: 1.7rem auto;
+}
+
+.zomato-widget-wrapper {
+	display: block;
+	margin: 0rem auto 1.8rem;
+}
+
+@media only screen and (min-width: 950px) {
+	#column-layout {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#column-left {
+		display: flex;
+		flex-direction: column;
+		flex: 3;
+	}
+
+	#column-right {
+		flex: 2;
+		flex-direction: column;
+	}
+
+	.callout {
+		flex: 2;
+	}
+}
+
+/* Rules for phones and small devices. We hide the yelp-review 
+cards at this screen size because they scroll overflow and 
+nobody wants that ;) */
+
+@media only screen and (max-width: 476px) {
+	.card {
+		display: none;
+	}
+}
