@@ -10,11 +10,22 @@ a {
 
 h1 {
 	margin-bottom: 3%;
-	margin-top: 6rem;
 }
 
+header {
+    background: rgb(37,36,42);
+	background: -moz-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	background: linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25242a",endColorstr="#131d6c",GradientType=1); 	
+	height: 6.5rem;
+	padding: 1%;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
 nav {
-	display: flex;
+	float: right;
 }
 
 main {
@@ -79,6 +90,26 @@ footer {
 	display: none;
 }
 
+.page-content {
+	margin-top: 4rem;
+}
+
+#hours-table {
+	width: 35%;
+}
+
+.day {
+	display: inline;
+}
+
+.hours {
+	display: inline;
+	float: right;
+}
+
+#map {
+	margin-top: 10%;
+}
 
 /* Responsive styles */
 
@@ -119,6 +150,10 @@ footer {
 		position: relative;
 		width: 2rem;
 		margin: 0 auto;
+	}
+
+	#hours-table {
+		width: 100%
 	}
 }
 

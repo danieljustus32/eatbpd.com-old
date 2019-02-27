@@ -1,0 +1,1 @@
+module.exports = { api: "AIzaSyD9_TbNU68FCOtkDnWLqs9KzylO6ZyQyM4"};
