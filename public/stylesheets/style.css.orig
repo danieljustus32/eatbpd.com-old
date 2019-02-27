@@ -1,0 +1,179 @@
+body {
+	background-color: white;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	color: #00B7FF;
+}
+
+h1 {
+	margin-bottom: 3%;
+}
+
+nav {
+	padding: auto 2% 2% 0;
+}
+
+main {
+	padding: 2%;
+}
+
+footer {
+	height: 20%;
+	margin: auto;
+	padding: auto;
+	text-align: center;
+}
+
+#header-wrapper {
+    background: rgb(37,36,42);
+	background: -moz-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	background: linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25242a",endColorstr="#131d6c",GradientType=1); 	
+	height: 7rem;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	transition: 0.5s;
+}
+
+#nav-wrapper {
+    width: 40vw;
+	display: flex;
+	justify-content: right;
+<<<<<<< HEAD
+	margin-right: 2%;
+	padding-bottom: 0.5%;
+	max-height: auto;
+=======
+	padding-bottom: 0.5%;
+	
+>>>>>>> 06d6c24728ecb6c44ed1c0a75a8a50837e67982c
+}
+
+#logo {
+	flex: 1;
+	margin-bottom: 0.5%;
+	margin-top: auto;
+	align-self: baseline;
+	max-width: 60vw;
+	transition: 0.5s;
+}
+
+.btn-primary {
+	background-color: #141e2d;
+	border-color: #141e2d;
+	border-radius: 2px;
+	margin: 2px;
+}
+
+.nav-button {
+	
+	width: auto;
+}
+
+.nav-button:hover {
+	background-color: #3b557c;
+	border: 1px solid white;
+
+}
+
+#hamburger-button {
+	display: none;
+}
+
+.page-content {
+	margin-top: 10rem;
+	transition: 0.5s;
+}
+
+#hours-table {
+	margin-bottom: 5%;
+	width: 35%;
+}
+
+.day {
+	display: inline;
+}
+
+.hours {
+	display: inline;
+	float: right;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 810px) {
+
+	.page-content {
+		margin-top: 6rem;
+	}
+
+	#header-wrapper {
+		height: 3.5rem;
+	}
+
+	h1 {
+		font-size: 1.7rem;
+		margin-top: 4rem;
+	}
+
+	
+
+	.nav-button {
+		display: none;
+	}
+
+	#logo {
+		flex: 3;
+	}
+
+	#nav-wrapper {
+		flex: 2;
+	}
+
+	#hamburger-button {
+		background: url('../svg/ellipsis-v-solid.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		border: none;
+		display: flex;
+		left: -10%;
+		padding: 25%;
+		position: relative;
+		height: auto;
+		width: auto;
+		margin: auto 0;
+	}
+
+	#hours-table {
+		width: 100%
+	}
+}
+
+@media only screen and (min-width: 381px, max-width: 650px) {
+
+	
+}
+
+@media only screen and (max-width: 380px) {
+
+	h1 {
+		margin-top: 3.5rem;
+	}
+
+	.page-content {
+		margin-top: 4rem;
+	}
+
+	#header-wrapper {
+		height: 2.2rem;
+	}
+
+	#logo {
+		margin: auto 0 auto 2px;
+	}
+}

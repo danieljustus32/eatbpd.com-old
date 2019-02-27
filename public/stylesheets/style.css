@@ -10,16 +10,16 @@ a {
 
 h1 {
 	margin-bottom: 3%;
-	margin-top: 6rem;
 }
 
 nav {
-	display: flex;
+	padding: auto 2% 2% 0;
 }
 
 main {
-	padding: 8%;
+	padding: 2%;
 }
+
 footer {
 	height: 20%;
 	margin: auto;
@@ -44,9 +44,14 @@ footer {
     width: 40vw;
 	display: flex;
 	justify-content: right;
+<<<<<<< HEAD
 	margin-right: 2%;
 	padding-bottom: 0.5%;
 	max-height: auto;
+=======
+	padding-bottom: 0.5%;
+	
+>>>>>>> 06d6c24728ecb6c44ed1c0a75a8a50837e67982c
 }
 
 #logo {
@@ -66,7 +71,7 @@ footer {
 }
 
 .nav-button {
-	margin-top: auto;
+	
 	width: auto;
 }
 
@@ -80,10 +85,32 @@ footer {
 	display: none;
 }
 
+.page-content {
+	margin-top: 10rem;
+	transition: 0.5s;
+}
+
+#hours-table {
+	margin-bottom: 5%;
+	width: 35%;
+}
+
+.day {
+	display: inline;
+}
+
+.hours {
+	display: inline;
+	float: right;
+}
 
 /* Responsive styles */
 
 @media only screen and (max-width: 810px) {
+
+	.page-content {
+		margin-top: 6rem;
+	}
 
 	#header-wrapper {
 		height: 3.5rem;
@@ -121,6 +148,10 @@ footer {
 		width: auto;
 		margin: auto 0;
 	}
+
+	#hours-table {
+		width: 100%
+	}
 }
 
 @media only screen and (min-width: 381px, max-width: 650px) {
@@ -132,6 +163,10 @@ footer {
 
 	h1 {
 		margin-top: 3.5rem;
+	}
+
+	.page-content {
+		margin-top: 4rem;
 	}
 
 	#header-wrapper {
