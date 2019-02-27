@@ -12,6 +12,10 @@ h1 {
 	margin-bottom: 3%;
 }
 
+nav {
+	padding: auto 2% 2% 0;
+}
+
 main {
 	padding: 2%;
 }
@@ -40,8 +44,8 @@ footer {
     width: 40vw;
 	display: flex;
 	justify-content: right;
-	margin-right: 2%;
-	padding-bottom: 0.5%%;
+	padding-bottom: 0.5%;
+	
 }
 
 #logo {
@@ -61,7 +65,7 @@ footer {
 }
 
 .nav-button {
-	margin-top: auto;
+	
 	width: auto;
 }
 
