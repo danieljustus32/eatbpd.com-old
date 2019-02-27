@@ -12,25 +12,14 @@ h1 {
 	margin-bottom: 3%;
 }
 
-header {
-    background: rgb(37,36,42);
-	background: -moz-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	background: -webkit-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	background: linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25242a",endColorstr="#131d6c",GradientType=1); 	
-	height: 6.5rem;
-	padding: 1%;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
-}
 nav {
-	float: right;
+	padding: auto 2% 2% 0;
 }
 
 main {
-	padding: 8%;
+	padding: 2%;
 }
+
 footer {
 	height: 20%;
 	margin: auto;
@@ -55,8 +44,8 @@ footer {
     width: 40vw;
 	display: flex;
 	justify-content: right;
-	margin-right: 2%;
-	padding-bottom: 0.5%%;
+	padding-bottom: 0.5%;
+	
 }
 
 #logo {
@@ -76,7 +65,7 @@ footer {
 }
 
 .nav-button {
-	margin-top: auto;
+	
 	width: auto;
 }
 
@@ -91,10 +80,12 @@ footer {
 }
 
 .page-content {
-	margin-top: 4rem;
+	margin-top: 10rem;
+	transition: 0.5s;
 }
 
 #hours-table {
+	margin-bottom: 5%;
 	width: 35%;
 }
 
@@ -107,13 +98,13 @@ footer {
 	float: right;
 }
 
-#map {
-	margin-top: 10%;
-}
-
 /* Responsive styles */
 
 @media only screen and (max-width: 810px) {
+
+	.page-content {
+		margin-top: 6rem;
+	}
 
 	#header-wrapper {
 		height: 3.5rem;
@@ -166,6 +157,10 @@ footer {
 
 	h1 {
 		margin-top: 3.5rem;
+	}
+
+	.page-content {
+		margin-top: 4rem;
 	}
 
 	#header-wrapper {
