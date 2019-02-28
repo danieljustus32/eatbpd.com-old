@@ -3,28 +3,31 @@ include mixins/maps.pug
 
 block content
   main
-    h1= "Hours & Location"
-    table#hours-table
-      tr
-        td.day Sunday
-        td.hours 8am - 3pm
-      tr
-        td.day Monday
-        td.hours 8am - 8pm
-      tr
-        td.day Tuesday
-        td.hours 8am - 8pm
-      tr
-        td.day Wednesday
-        td.hours 8am - 8pm
-      tr
-        td.day Thursday
-        td.hours 8am - 8pm
-      tr
-        td.day Friday
-        td.hours 8am - 8pm
-      tr
-        td.day Saturday
-        td.hours 8am - 8pm
-    +google-map-place("ChIJb47bNRlUkFQRhlkA1DvHHh4", key)
+    section.page-content
+      h1= "Hours & Location"
+      table#hours-table
+        tr
+          td.day Sunday
+          td.hours 8am - 3pm
+        tr
+          td.day Monday
+          td.hours 8am - 8pm
+        tr
+          td.day Tuesday
+          td.hours 8am - 8pm
+        tr
+          td.day Wednesday
+          td.hours 8am - 8pm
+        tr
+          td.day Thursday
+          td.hours 8am - 8pm
+        tr
+          td.day Friday
+          td.hours 8am - 8pm
+        tr
+          td.day Saturday
+          td.hours 8am - 8pm
+      +google-map-place("ChIJb47bNRlUkFQRhlkA1DvHHh4", key)
+
+  link(rel='stylesheet' href='/stylesheets/hours.css' type='text/css')
   

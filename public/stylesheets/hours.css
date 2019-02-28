@@ -1,0 +1,13 @@
+#hours-table {
+	margin-bottom: 5%;
+	width: 35%;
+}
+
+.day {
+	display: inline;
+	font-weight: bold;
+}
+
+.hours {
+	display: inline;
+	float: right;
