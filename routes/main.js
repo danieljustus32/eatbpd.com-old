@@ -10,6 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/menu', function(req, res, next) {
+  var db = req.con;
+  console.log(db);
   res.render('menu');
 });
 
