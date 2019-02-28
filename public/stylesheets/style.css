@@ -13,7 +13,8 @@ h1 {
 }
 
 nav {
-	padding: auto 2% 2% 0;
+	display: flex;
+	margin-top: auto;
 }
 
 main {
@@ -42,12 +43,11 @@ footer {
 
 #nav-wrapper {
     width: 40vw;
-	display: flex;
+    display: flex;
 	justify-content: right;
 	margin-right: 2%;
 	padding-bottom: 0.5%;
 	max-height: auto;
-	padding-bottom: 0.5%;
 }
 
 #logo {
@@ -67,7 +67,6 @@ footer {
 }
 
 .nav-button {
-	
 	width: auto;
 }
 
