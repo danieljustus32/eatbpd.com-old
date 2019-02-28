@@ -13,7 +13,8 @@ h1 {
 }
 
 nav {
-	padding: auto 2% 2% 0;
+	display: flex;
+	margin-top: auto;
 }
 
 main {
@@ -28,11 +29,11 @@ footer {
 }
 
 #header-wrapper {
-    background: rgb(37,36,42);
-	background: -moz-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	background: -webkit-linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	background: linear-gradient(180deg, rgba(37,36,42,1) 0%, rgba(9,7,34,1) 45%, rgba(19,29,108,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25242a",endColorstr="#131d6c",GradientType=1); 	
+	background: rgb(40,45,53);
+	background: -moz-linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#282d35",endColorstr="#000000",GradientType=1);
 	height: 7rem;
 	position: fixed;
 	width: 100%;
@@ -42,10 +43,11 @@ footer {
 
 #nav-wrapper {
     width: 40vw;
-	display: flex;
+    display: flex;
 	justify-content: right;
+	margin-right: 2%;
 	padding-bottom: 0.5%;
-	
+	max-height: auto;
 }
 
 #logo {
@@ -65,7 +67,6 @@ footer {
 }
 
 .nav-button {
-	
 	width: auto;
 }
 
@@ -82,6 +83,24 @@ footer {
 .page-content {
 	margin-top: 10rem;
 	transition: 0.5s;
+}
+
+#footer-wrapper {
+	background: rgb(40,45,53);
+	background: -moz-linear-gradient(0deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(0deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#282d35",endColorstr="#000000",GradientType=1);
+	border-top: 1px solid grey;
+	display: flex;
+	min-height: 8rem;
+}
+
+#footer-text {
+	z-index: 2;
+	flex: 1;
+	color: #b7b9bc;
+	margin: auto 0;
 }
 
 #hours-table {
@@ -134,13 +153,13 @@ footer {
 		background-repeat: no-repeat;
 		background-position: center;
 		border: none;
-		display: inline-block;
-		height: 2rem;
+		display: flex;
 		left: -10%;
 		padding: 25%;
 		position: relative;
-		width: 2rem;
-		margin: 0 auto;
+		height: auto;
+		width: auto;
+		margin: auto 0;
 	}
 
 	#hours-table {
