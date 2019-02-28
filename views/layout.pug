@@ -17,13 +17,19 @@ html
   body
     header
       div#header-wrapper
-        img#logo(src="/image/logo.png" alt="Brown\'s Point Diner")
+        img#logo(src="/image/logo.png" alt="Brown's Point Diner")
         nav
-          a#hamburger-button.btn.btn-primary(type="button" data-target='#side-nav' data-toggle="collapse")
+          div#nav-wrapper
+            a#hamburger-button.btn.btn-primary(type="button" data-target='#side-nav' data-toggle="collapse")
             div#side-nav.collapse.hidden  
-          a.nav-button.btn.btn-primary(href='/') Home
-          a.nav-button.btn.btn-primary(href='/menu') Menu
-          a.nav-button.btn.btn-primary(href='/hours') Hours & Location
+            a.nav-button.btn.btn-primary(href='/') Home
+            a.nav-button.btn.btn-primary(href='/menu') Menu
+            a.nav-button.btn.btn-primary(href='/hours') Hours & Location
     block content
     footer
-      || &copy; 2019 |
+      div#footer-wrapper
+        p#footer-text 
+          || &copy; 2019 |
+          br 
+          | Powered by Node.js
+        
