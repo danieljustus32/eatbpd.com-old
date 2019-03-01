@@ -24,7 +24,6 @@ setInterval(function () {
     con.query('SELECT 1');
 }, 5000);
 
-debugger
 con.connect(function(err) {
   if(err){
     console.log('Error connecting to Db');
