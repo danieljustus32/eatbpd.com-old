@@ -1,1 +1,0 @@
-module.exports = { api: "AIzaSyD9_TbNU68FCOtkDnWLqs9KzylO6ZyQyM4", bpdMenuUser: "i5194853_wp1", bpdMenuPassword: "TFsofVNu.bBm" };
