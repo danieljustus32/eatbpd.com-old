@@ -11,21 +11,26 @@ var usersRouter = require('./routes/users');
 var app = express();
 // database setup
 var mysql = require("mysql");
-var con = mysql.createConnection({
-  host: "107.180.4.98",
+var con = mysql.createConnection(
+{ host: "107.180.4.98",
   user: credentials.bpdMenuUser,
-  password: credentials.bpdMenuPassword,
-  database: "bpd_menu",
-  port: 3306,
+  password: credentials.bpdMenuPassword, 
 });
+
+// Keep our conncection from timing out
+
+setInterval(function () {
+    con.query('SELECT 1');
+}, 5000);
+
 debugger
-con.connect(function(err){
+con.connect(function(err) {
   if(err){
     console.log('Error connecting to Db');
     console.log(con);
-    return;
   }
   console.log('Connection established');
+  
 });
 
 // Make our db accessible to our router
