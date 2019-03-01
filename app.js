@@ -14,7 +14,8 @@ var mysql = require("mysql");
 var con = mysql.createConnection(
 { host: "107.180.4.98",
   user: credentials.bpdMenuUser,
-  password: credentials.bpdMenuPassword, 
+  password: credentials.bpdMenuPassword,
+  database: "bpd_menu" 
 });
 
 // Keep our conncection from timing out
