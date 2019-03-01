@@ -1,0 +1,19 @@
+/* Styles that apply only to the hours.pug view */
+
+iframe {
+	border: 1px solid grey;
+}
+
+#hours-table {
+	margin-bottom: 5vh;
+	width: 35%;
+}
+
+.day {
+	display: inline;
+	font-weight: bold;
+}
+
+.hours {
+	display: inline;
+	float: right;
