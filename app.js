@@ -1,3 +1,4 @@
+
 const credentials = require('./config/credentials.js');
 var createError = require('http-errors');
 var express = require('express');
@@ -39,7 +40,10 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use(function(req,res,next){
+
+
+// Expose Api key to router for hours & location page
+app.use(function(req,res,next) {
     req.key = credentials.api;
     next();
 });

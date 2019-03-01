@@ -1,4 +1,5 @@
 const credentials = require('../config/credentials.js');
+var menuBuilder = require('../modules/menubuilder.js');
 
 var express = require('express');
 var router = express.Router();
@@ -12,6 +13,10 @@ router.get('/', function(req, res, next) {
 router.get('/menu/:meal', function(req, res, next) {
   var db = req.con;
   console.log(db);
+  var menu = new menuBuilder(req.params.meal, db);
+  menu.build();
+  // we want to be able to just call predefined middleware here,
+  // something like makemeal(req.params.meal)
   res.render('menu', { meal: req.params.meal});
 });
 
