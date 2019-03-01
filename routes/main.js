@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 router.get('/menu/:meal', function(req, res, next) {
   var db = req.con;
   console.log(db);
-  res.render(req.params.meal, { meal: req.params.meal});
+  res.render('menu', { meal: req.params.meal});
 });
 
 router.get('/hours', function(req, res, next) {
