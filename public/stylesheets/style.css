@@ -54,6 +54,7 @@ footer {
 	flex: 1;
 	margin-bottom: 0.5%;
 	margin-top: auto;
+	margin-left: 0.5%;
 	align-self: baseline;
 	max-width: 60vw;
 	transition: 0.5s;
