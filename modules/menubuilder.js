@@ -1,23 +1,26 @@
 module.exports = function menuBuilder(meal, con) {
 	this.meal = meal;
 	this.con = con;
+	var mealCategories = [];
 	this.query = con.query( {
-	sql: 'SELECT DISTINCT MealCategory FROM ' + meal + ';' 
+	sql: 'SELECT * FROM ' + meal + ';' 
 	}, 
-	function(err, rows, fields) {
+	function(err, result) {
     if (err) {
       //Do not throw err as it will crash the server. 
       console.log(err.code);
     } else {
-    	for(var i in rows) {
-    		console.log(rows[i])
+    	for(var i in result) {
+    		mealCategories.push(result[i]);
+
     	}
       //Do anything with the query result
+      console.log(mealCategories);
     } 
 	});
 	this.build = function() {
-		debugger;
-		console.log(this.mealCategories);
-		return [this.mealCategories];
+		console.log(mealCategories)
+		return mealCategories;
 	};
+
 };
