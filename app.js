@@ -19,20 +19,19 @@ var con = mysql.createConnection(
   database: "bpd_menu" 
 });
 
+con.connect(function(err) {
+  if(err){
+    console.log('Error connecting to Db');
+  }
+  console.log('Connection established');
+  
+});
+
 // Keep our conncection from timing out
 
 setInterval(function () {
     con.query('SELECT 1');
 }, 5000);
-
-con.connect(function(err) {
-  if(err){
-    console.log('Error connecting to Db');
-    console.log(con);
-  }
-  console.log('Connection established');
-  
-});
 
 // Make our db accessible to our router
 app.use(function(req,res,next){
