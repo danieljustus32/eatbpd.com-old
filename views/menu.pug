@@ -10,13 +10,19 @@ block content
           a.menu-control-button.btn.btn-primary(href='/menu/breakfast#menu') Breakfast
           a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
           a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
-        div#menu 
-          ul   
+        div#menu-wrapper
+          each category in categories
+            - var category = category
+            button.menu-category-button= category
             each item in menu
-                li #{item.Name}
-  - 
-    console.log(menu)
-  
+              if item.MealCategory == category
+                li= item.Name
+                  li= item.Description  
 
+          
+
+  
+  script.
+    
   link(rel='stylesheet' href='/stylesheets/menu.css' type='text/css')
 
