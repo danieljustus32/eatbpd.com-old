@@ -10,7 +10,12 @@ block content
           a.menu-control-button.btn.btn-primary(href='/menu/breakfast#menu') Breakfast
           a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
           a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
-          p Menu: #{menu}
+        div#menu 
+          ul   
+            each item in menu
+                li #{item.Name}
+  - 
+    console.log(menu)
   
 
   link(rel='stylesheet' href='/stylesheets/menu.css' type='text/css')
