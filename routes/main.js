@@ -11,13 +11,25 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/menu/:meal', function(req, res, next) {
-  var db = req.con;
-  var menu = new menuBuilder(req.params.meal, db);
+  var con = req.con;
+  var meal = req.params.meal
   // we want to be able to just call predefined middleware here,
   // something like makemeal(req.params.meal)
-  menu.build();
-  console.log(menu);
-  res.render('menu', { meal: req.params.meal, categories: menuBuilder.mealCategories});
+  con.query( {
+	sql: 'SELECT * FROM ' + meal + ';' 
+	}, 
+	function(err, result) {
+    if (err) {
+      //Do not throw err as it will crash the server. 
+    	console.log(err.code);
+    } else {
+    	var menu = [];
+    	for(var i in result) {
+    		menu.push(result[i]);
+    	}
+    	res.render('menu', { meal: req.params.meal, menu: menu });
+    } 
+	});
 });
 
 router.get('/hours', function(req, res, next) {

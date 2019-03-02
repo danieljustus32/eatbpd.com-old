@@ -14,7 +14,7 @@ module.exports = function menuBuilder(meal, con) {
     		menu.push(result[i]);
     	}
       //Do anything with the query result
-      	  console.log(menu);
+      	 
       	  return menu;
     } 
 	});
