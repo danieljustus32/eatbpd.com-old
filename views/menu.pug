@@ -3,50 +3,63 @@ extends layout
 block content
   main 
     section.page-content 
-      h1= "Menu Page"
+      h1 Menu
+      // Highlights Carousel
       #carousel-multi.carousel.slide.carousel-multi-item.v-2(data-ride='carousel')
         .carousel-inner(role='listbox')
+          // Carousel Item
           .carousel-item.active
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='/image/burger.jpeg', alt='Card image cap')
                 .card-body
                   h4.card-title.font-weight-bold Card title
+          // Carousel Item
           .carousel-item
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (34).jpg', alt='Card image cap')
                 .card-body
                   h4.card-title.font-weight-bold Card title
+          // Carousel Item
           .carousel-item
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (38).jpg', alt='Card image cap')
                 .card-body
                   h4.card-title.font-weight-bold Card title
+          // Carousel Item
           .carousel-item
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='/image/pie.png', alt='A fresh-baked apple pie')
                 .card-body
                   h4.card-title.font-weight-bold Try our fresh-baked desserts
+          // Carousel Item
           .carousel-item
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (30).jpg', alt='Card image cap')
                 .card-body
                   h4.card-title.font-weight-bold Card title
+          // Carousel Item
           .carousel-item
             .col-md-6
               .card.mb-2.carousel-card
                 img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (27).jpg', alt='Card image cap')
                 .card-body
                   h4.card-title.font-weight-bold Card title
+        // Carousel Controls
+        #controls-bottom
+          a.btn-floating.carousel-left(href='#carousel-multi', data-slide='prev')
+            i.fas.fa-chevron-left
+          a.btn-floating.carousel-right(href='#carousel-multi', data-slide='next')
+            i.fas.fa-chevron-right
       section#menu
         #menu-control-wrapper
-          a#breakfast-control-button.menu-control-button.btn.btn-primary(href='/menu/breakfast#menu') Breakfast
-          a#lunch-control-button.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
-          a#dinner-control-button.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
+          a#breakfast-control-button.menu-control-button.btn.btn-primary(href='/menu/breakfast#controls-bottom') Breakfast
+          a#lunch-control-button.menu-control-button.btn.btn-primary(href='/menu/lunch#controls-bottom') Lunch
+          a#dinner-control-button.menu-control-button.btn.btn-primary(href='/menu/dinner#controls-bottom') Dinner 
         #menu-wrapper
           - var n = 0
           - var i = 0
