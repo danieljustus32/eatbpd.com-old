@@ -13,11 +13,14 @@ block content
         div#menu-wrapper
           each category in categories
             - var category = category
-            button.menu-category-button= category
-            each item in menu
-              if item.MealCategory == category
-                li= item.Name
-                  li= item.Description  
+            button.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper')= category
+            div(class='menu-collapse-wrapper')
+              each item in menu
+                if item.MealCategory == category
+                  li= item.Name
+                
+                
+
 
           
 
