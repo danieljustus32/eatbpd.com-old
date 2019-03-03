@@ -11,24 +11,36 @@ block content
           a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
           a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
         div#menu-wrapper
-          - var count = 0  
+          - var n = 0
+          - var i = 0
             each category in categories
               - var category = category
-              - count++
-              button.btn.btn-primary.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper-' + count)= category
-              div(class='collapse menu-collapse-wrapper menu-collapse-wrapper-' + count data-parent='#menu-wrapper')
+              - n++
+              button.btn.btn-primary.menu-category-button(id='menu-category-button-' + 1 data-toggle='collapse' data-target='#menu-collapse-wrapper-' + n)= category
+              div(class='collapse menu-collapse-wrapper' id='menu-collapse-wrapper-' + n data-parent='#menu-wrapper')
                 each item in menu
+                  - i++
                   if item.MealCategory == category
-                    button(class='card-header item-button')= item.Name
+                    div.card
+                      button(class='card-header item-button item-button-' + i data-toggle='collapse' data-target='#item-collapse-wrapper-' + i)
+                        span.item-name= item.Name
+                        span.header-price.price.price-1= item.Price1
+                        if item.SignatureItem == '1'
+                          img.sig-item(src='/image/browns-point-sig-item.png')  
+                      div(class='collapse-wrapper collapse' id='item-collapse-wrapper-' + i data-parent='#menu-collapse-wrapper-' + n)
+                        div(class='card-body card-body-' + i)
+                          div.description-wrapper  
+                            span.description= item.Description
+                          div.prices-wrapper 
+                            span.price.price-1= item.Price1
+                            span.price-1-category= item.Price1Category
+                            span.price.price-2= item.Price2
+                            span.price-2-category= item.Price2Category
+
+
+                        
 
                 
-                
-
-
-          
-
-  
-  script.
     
   link(rel='stylesheet' href='/stylesheets/menu.css' type='text/css')
 
