@@ -11,13 +11,16 @@ block content
           a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
           a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
         div#menu-wrapper
+        - var count = 0  
           each category in categories
             - var category = category
-            button.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper')= category
-            div(class='menu-collapse-wrapper')
+            - count++
+            button.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper-' + count)= category
+            div(class='collapse menu-collapse-wrapper-' + count)
               each item in menu
                 if item.MealCategory == category
                   li= item.Name
+
                 
                 
 
