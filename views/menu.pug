@@ -11,15 +11,15 @@ block content
           a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
           a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
         div#menu-wrapper
-        - var count = 0  
-          each category in categories
-            - var category = category
-            - count++
-            button.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper-' + count)= category
-            div(class='collapse menu-collapse-wrapper-' + count)
-              each item in menu
-                if item.MealCategory == category
-                  li= item.Name
+          - var count = 0  
+            each category in categories
+              - var category = category
+              - count++
+              button.btn.btn-primary.menu-category-button(data-toggle='collapse' data-target='.menu-collapse-wrapper-' + count)= category
+              div(class='collapse menu-collapse-wrapper menu-collapse-wrapper-' + count data-parent='#menu-wrapper')
+                each item in menu
+                  if item.MealCategory == category
+                    button(class='card-header item-button')= item.Name
 
                 
                 

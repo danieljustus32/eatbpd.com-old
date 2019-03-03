@@ -39,6 +39,7 @@ footer {
 	width: 100%;
 	display: flex;
 	transition: 0.5s;
+	z-index: 5;
 }
 
 #nav-wrapper {

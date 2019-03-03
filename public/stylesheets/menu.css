@@ -1,9 +1,40 @@
 #menu-control-wrapper {
 	display: flex;
 	margin: 0 15rem;
+	margin-bottom:2rem;
 }
 
 .menu-control-button {
 	margin: 0 auto;
 	width: 10rem;
+}
+
+#menu-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+button.menu-category-button {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	margin: 0 auto;
+	width: 70%;
+}
+
+.menu-collapse-wrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: left;
+	margin: 0 auto;
+	width: 70%;
+}
+
+button.item-button {
+	flex: 1;
+	background-color: #c9cacc;
+	color: black;
+	width: 100%;
 }
