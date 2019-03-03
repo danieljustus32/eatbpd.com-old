@@ -39,6 +39,7 @@ footer {
 	width: 100%;
 	display: flex;
 	transition: 0.5s;
+	z-index: 5;
 }
 
 #nav-wrapper {
@@ -65,16 +66,12 @@ footer {
 	border-color: #141e2d;
 	border-radius: 2px;
 	margin: 2px;
-}
-
-.nav-button {
 	width: auto;
 }
 
-.nav-button:hover {
+.btn-primary:hover {
 	background-color: #3b557c;
 	border: 1px solid white;
-
 }
 
 #hamburger-button {
