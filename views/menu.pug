@@ -1,6 +1,46 @@
 extends layout
 
 block content
-  main  
-    h1= "Menu Page"
-    p Welcome
+  main 
+    section.page-content 
+      h1= "Menu Page"
+      p Beef noodles modem sign human hacker katana boy advert industrial grade meta-man shrine tiger-team market realism carbon rain. Assault kanji futurity savant warehouse gang artisanal alcohol augmented reality human wonton soup singularity cardboard realism sub-orbital vehicle courier. Systemic footage uplink market man shanty town post-tiger-team motion sensory fluidity urban geodesic math-savant industrial grade. Fluidity hotdog construct towards math-narrative crypto-car hacker artisanal. Rifle paranoid 8-bit tube vinyl franchise singularity otaku vehicle Kowloon stimulate. Dome neural lights narrative modem dolphin futurity-ware pistol vinyl boy cartel tiger-team rebar singularity. Disposable systema knife sprawl render-farm sign into sensory soul-delay. Shrine San Francisco bridge papier-mache-space euro-pop tube human BASE jump man engine fluidity pistol. Grenade media decay Kowloon artisanal sentient rain. 
+      section#menu
+        div#menu-control-wrapper
+          a.menu-control-button.btn.btn-primary(href='/menu/breakfast#menu') Breakfast
+          a.menu-control-button.btn.btn-primary(href='/menu/lunch#menu') Lunch
+          a.menu-control-button.btn.btn-primary(href='/menu/dinner#menu') Dinner 
+        div#menu-wrapper
+          - var n = 0
+          - var i = 0
+            each category in categories
+              - var category = category
+              - n++
+              button.btn.btn-primary.menu-category-button(id='menu-category-button-' + 1 data-toggle='collapse' data-target='#menu-collapse-wrapper-' + n)= category
+              div(class='collapse menu-collapse-wrapper' id='menu-collapse-wrapper-' + n data-parent='#menu-wrapper')
+                each item in menu
+                  - i++
+                  if item.MealCategory == category
+                    div.card
+                      button(class='card-header item-button item-button-' + i data-toggle='collapse' data-target='#item-collapse-wrapper-' + i)
+                        span.item-name= item.Name
+                        span.header-price.price.price-1= item.Price1
+                        if item.SignatureItem == '1'
+                          img.sig-item(src='/image/browns-point-sig-item.png')  
+                      div(class='collapse-wrapper collapse' id='item-collapse-wrapper-' + i data-parent='#menu-collapse-wrapper-' + n)
+                        div(class='card-body card-body-' + i)
+                          div.description-wrapper  
+                            span.description= item.Description
+                          div.prices-wrapper 
+                            span.price.price-1= item.Price1
+                            span.price-1-category= item.Price1Category
+                            span.price.price-2= item.Price2
+                            span.price-2-category= item.Price2Category
+
+
+                        
+
+                
+    
+  link(rel='stylesheet' href='/stylesheets/menu.css' type='text/css')
+

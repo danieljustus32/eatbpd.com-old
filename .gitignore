@@ -33,7 +33,7 @@ bower_components
 build/Release
 
 # Config directory
-/config
+config/
 
 # Dependency directories
 node_modules/
