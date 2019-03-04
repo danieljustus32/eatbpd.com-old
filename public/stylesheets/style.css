@@ -4,10 +4,6 @@ body {
 	width: 100%;
 }
 
-a {
-	color: #00B7FF;
-}
-
 h1 {
 	margin-bottom: 3%;
 }
@@ -39,7 +35,7 @@ footer {
 	width: 100%;
 	display: flex;
 	transition: 0.5s;
-	z-index: 5;
+	z-index: 2;
 }
 
 #nav-wrapper {
@@ -80,7 +76,7 @@ footer {
 
 .page-content {
 	margin-top: 10rem;
-	transition: 0.5s;
+	
 }
 
 #footer-wrapper {
