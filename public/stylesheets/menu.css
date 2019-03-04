@@ -17,10 +17,15 @@
 	border-radius: 5px 0 0 0;
 }
 
+#dinner-control-button {
+	border-radius: 0 5px 0 0;
+}
+
 #menu-wrapper {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	margin-bottom: 2rem;
 }
 
 button.menu-category-button {
@@ -99,7 +104,7 @@ button.item-button {
 }
 
 #carousel-multi {
-	margin: 0 auto 2rem;
+	margin: 0 auto;
 	width: 70%;
 }
 

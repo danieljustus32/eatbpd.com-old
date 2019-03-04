@@ -32,7 +32,6 @@ router.get('/menu/:meal', function(req, res, next) {
     	}
       for (var i in menu) {
         var category = menu[i].MealCategory;
-        console.log(category)
         if (!categories.includes(category)) {
           categories.push(category)
         
@@ -41,7 +40,6 @@ router.get('/menu/:meal', function(req, res, next) {
           mealsByCategory.push(menu[i])
         }
       }
-      console.log(categories)
     	res.render('menu', { meal: req.params.meal, menu: menu, categories: categories});
     } 
 	});
