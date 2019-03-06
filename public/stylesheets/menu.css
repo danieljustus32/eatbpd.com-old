@@ -11,6 +11,7 @@
 	margin: 0 auto;
 	flex: 1;
 	border-radius: 0;
+	font-weight: bold;
 }
 
 #breakfast-control-button {
@@ -28,7 +29,7 @@
 	margin-bottom: 2rem;
 }
 
-button.menu-category-button {
+.menu-category-button {
 	display: flex;
 	color: black;
 	flex: 1;
@@ -37,6 +38,8 @@ button.menu-category-button {
 	width: 70%;
 	border-bottom: 2px solid black;
 	border-radius: 0 !important;
+	background-color: #f9f9f9;
+	font-weight: bold;
 }
 
 .menu-collapse-wrapper {
@@ -49,9 +52,10 @@ button.menu-category-button {
 	transition-duration: height 2s ease;
 }
 
-button.item-button {
+
+.item-button {
 	flex: 1;
-	background-color: #e2e2e2;
+	background-color: #f9f9f9;
 	color: black;
 	width: 100%;
 	border-bottom: 1px solid black;
@@ -145,4 +149,31 @@ button.item-button {
 .fas.fa-chevron-left {
 	color: grey;
 	font-size: 2rem;
+}
+
+@media only screen and (max-width: 810px) {
+	h1 {
+		display: none;
+	}
+
+	.item-button {
+		font-size: 0.8rem;
+	}
+
+	.card-body {
+		font-size: 0.8rem;
+	}
+
+	#menu-control-wrapper {
+		margin: 0;
+		width: 100%;
+	}
+
+	.menu-category-button {
+		width: 100%;
+	}
+
+	.menu-collapse-wrapper {
+		width: 100%;
+	}
 }
