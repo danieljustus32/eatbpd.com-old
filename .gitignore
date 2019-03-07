@@ -33,11 +33,15 @@ bower_components
 build/Release
 
 # Config directory
-/config
+config/
+
 
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Credentials and config
+config/
 
 # Typescript v1 declaration files
 typings/

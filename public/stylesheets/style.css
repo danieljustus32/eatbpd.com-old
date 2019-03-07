@@ -4,10 +4,6 @@ body {
 	width: 100%;
 }
 
-a {
-	color: #00B7FF;
-}
-
 h1 {
 	margin-bottom: 3%;
 }
@@ -39,21 +35,23 @@ footer {
 	width: 100%;
 	display: flex;
 	transition: 0.5s;
+	z-index: 2;
 }
 
 #nav-wrapper {
     width: 40vw;
     display: flex;
 	justify-content: right;
-	margin-right: 2%;
+	margin-right: 4%;
 	padding-bottom: 0.5%;
 	max-height: auto;
 }
 
-#logo {
+.logo {
 	flex: 1;
 	margin-bottom: 0.5%;
 	margin-top: auto;
+	margin-left: 0.5%;
 	align-self: baseline;
 	max-width: 60vw;
 	transition: 0.5s;
@@ -64,25 +62,21 @@ footer {
 	border-color: #141e2d;
 	border-radius: 2px;
 	margin: 2px;
-}
-
-.nav-button {
 	width: auto;
 }
 
-.nav-button:hover {
+.btn-primary:hover {
 	background-color: #3b557c;
 	border: 1px solid white;
-
 }
 
-#hamburger-button {
+#mobile-menu {
 	display: none;
 }
 
 .page-content {
-	margin-top: 10rem;
-	transition: 0.5s;
+	margin-top: 3rem;
+	
 }
 
 #footer-wrapper {
@@ -119,6 +113,14 @@ footer {
 
 /* Responsive styles */
 
+/* Triggered if going from tablet-size up */
+
+@media only screen and (min-width: 811px) {
+	.mobile-nav-link {
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 810px) {
 
 	.page-content {
@@ -126,7 +128,43 @@ footer {
 	}
 
 	#header-wrapper {
-		height: 3.5rem;
+		display: none;
+	}
+
+	#mobile-nav {
+		background: rgb(40,45,53);
+		background: -moz-linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+		background: -webkit-linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+		background: linear-gradient(180deg, rgba(40,45,53,1) 0%, rgba(9,8,31,1) 92%, rgba(0,0,0,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#282d35",endColorstr="#000000",GradientType=1);	
+		padding-bottom: 0.5rem;
+	}
+
+	.navbar-toggler {
+		margin-right: 0.3rem;
+	}
+
+	.navbar-toggler:focus {
+		outline-color: white;
+	}
+
+	.mobile-nav-link {
+		color: grey;
+		display: block;
+		text-align: left;
+		margin: 0.5rem;
+
+	}
+
+	.mobile-nav-link:focus {
+		color: white;
+		-webkit-box-shadow: 0px 0px 3px 3px rgba(232,232,232,0.64); 
+		box-shadow: 0px 0px 3px 3px rgba(232,232,232,0.64);
+		text-decoration: none;
+	}
+
+	.mobile-nav-link:hover {
+		color: white;
 	}
 
 	h1 {
@@ -145,21 +183,12 @@ footer {
 	}
 
 	#nav-wrapper {
-		flex: 2;
+		display: inline-block;
 	}
 
-	#hamburger-button {
-		background: url('../svg/ellipsis-v-solid.svg');
-		background-repeat: no-repeat;
-		background-position: center;
-		border: none;
-		display: flex;
-		left: -10%;
-		padding: 25%;
-		position: relative;
-		height: auto;
-		width: auto;
-		margin: auto 0;
+	#mobile-menu {
+		display: inline-block;
+		float: right;
 	}
 
 	#hours-table {
@@ -180,10 +209,6 @@ footer {
 
 	.page-content {
 		margin-top: 4rem;
-	}
-
-	#header-wrapper {
-		height: 2.2rem;
 	}
 
 	#logo {

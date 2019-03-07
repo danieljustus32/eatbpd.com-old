@@ -1,6 +1,97 @@
 extends layout
 
 block content
-  main  
-    h1= "Menu Page"
-    p Welcome
+  main 
+    section.page-content 
+      h1 Menu
+      section#menu
+        #menu-control-wrapper
+          a#breakfast-control-button.menu-control-button.btn.btn-primary(href='/menu/breakfast') Breakfast
+          a#lunch-control-button.menu-control-button.btn.btn-primary(href='/menu/lunch') Lunch
+          a#dinner-control-button.menu-control-button.btn.btn-primary(href='/menu/dinner') Dinner 
+        #menu-wrapper
+          - var n = 0
+          - var i = 0
+          each category in categories
+              - var category = category
+              - n++
+              button.card-header.menu-category-button(id='menu-category-button-' + n data-toggle='collapse' data-target='#menu-collapse-wrapper-' + n)= category
+              div(class='collapse menu-collapse-wrapper' id='menu-collapse-wrapper-' + n data-parent='#menu-wrapper')
+                each item in menu
+                  - i++
+                  if item.MealCategory == category
+                    .card
+                      button(class='card-header item-button item-button-' + i data-toggle='collapse' data-target='#item-collapse-wrapper-' + i)
+                        span.item-name= item.Name
+                        span.header-price.price.price-1= item.Price1
+                        if item.SignatureItem == '1'
+                          img.sig-item(src='/image/browns-point-sig-item.png')  
+                      div(class='collapse-wrapper collapse' id='item-collapse-wrapper-' + i data-parent='#menu-collapse-wrapper-' + n)
+                        div(class='card-body card-body-' + i)
+                          .description-wrapper  
+                            span.description= item.Description
+                          .prices-wrapper 
+                            span.price.price-1= item.Price1
+                            span.price-1-category= item.Price1Category
+                            span.price.price-2= item.Price2
+                            span.price-2-category= item.Price2Category
+      // Highlights Carousel
+      #carousel-multi.carousel.slide.carousel-multi-item.v-2(data-ride='carousel')
+        .carousel-inner(role='listbox')
+          // Carousel Item
+          .carousel-item.active
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/burger.jpeg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Fresh, juicy burgers and fries
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (34).jpg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/music-highlights.png', alt='Live music posters')
+                .card-body
+                  h4.card-title.font-weight-bold Live music @ the SandBAR
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/tiramisu.png', alt='Tiramisu with chocolate dust')
+                .card-body
+                  h4.card-title.font-weight-bold Try our fresh-baked desserts
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (30).jpg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (27).jpg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+        // Carousel Controls
+        #controls-bottom
+          a.btn-floating.carousel-left(href='#carousel-multi', data-slide='prev')
+            i.fas.fa-chevron-left
+          a.btn-floating.carousel-right(href='#carousel-multi', data-slide='next')
+            i.fas.fa-chevron-right
+  script.
+    var get = document.getElementsByClassName("carousel-multi");
+      for(i=0; i<get.length; i++){
+      get[i].removeEventListener("mouseover", yourFunction, false);
+   }
+
+
+  link(rel='stylesheet' href='/stylesheets/menu.css' type='text/css')
+

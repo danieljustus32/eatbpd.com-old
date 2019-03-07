@@ -1,0 +1,183 @@
+#menu {
+	min-height: 300px
+}
+
+#menu-control-wrapper {
+	display: flex;
+	margin: 0 15%;
+}
+
+.menu-control-button {
+	margin: 0 auto;
+	flex: 1;
+	border-radius: 0;
+	font-weight: bold;
+}
+
+#breakfast-control-button {
+	border-radius: 5px 0 0 0;
+}
+
+#dinner-control-button {
+	border-radius: 0 5px 0 0;
+}
+
+#menu-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.menu-category-button {
+	display: flex;
+	color: black;
+	flex: 1;
+	justify-content: left;
+	margin: 0 auto;
+	width: 70%;
+	border-bottom: 2px solid black;
+	border-radius: 0 !important;
+	background-color: #f9f9f9;
+	font-weight: bold;
+}
+
+.menu-collapse-wrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: left;
+	margin: 0 auto;
+	width: 70%;
+	transition-duration: height 2s ease;
+}
+
+
+.item-button {
+	flex: 1;
+	background-color: #f9f9f9;
+	color: black;
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.item-name {
+	float: left;
+	margin-left: 1rem;
+}
+
+
+.card-body {
+	background-color: white;
+	border: 0px 1px 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+.description-wrapper {
+	margin-bottom: 1rem;
+}
+
+.prices-wrapper {
+	display: flex;
+	flex: 1;
+	justify-content: right;
+}
+
+.prices-wrapper span {
+	margin-right: 1rem;
+}
+
+.price {
+	font-weight: bold;
+}
+
+.header-price {
+	float: right;
+}
+
+.sig-item {
+	float: right;
+	height: 1.7rem;
+	width: auto;
+	margin: auto 4rem auto auto;
+}
+
+.carousel-item .col-md-6 {
+	margin: 0 auto;
+}
+
+#carousel-multi {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.carousel-card {
+	-webkit-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 8px 5px 0px rgba(0,0,0,0.75);
+}
+
+#controls-bottom {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.carousel-right {
+	margin: 1rem auto 0.5rem;
+}
+
+.carousel-left {
+	margin: 1rem auto 0.5rem;
+}
+
+.fas.fa-chevron-right:hover {
+	color: #3b557c;
+}
+
+.fas.fa-chevron-left:hover {
+	color: #3b557c;
+}
+
+.fas.fa-chevron-right {
+	color: grey;
+	font-size: 2rem;
+}
+
+.fas.fa-chevron-left {
+	color: grey;
+	font-size: 2rem;
+}
+
+@media only screen and (max-width: 810px) {
+	h1 {
+		display: none;
+	}
+
+	#carousel-multi {
+		width: 100%;
+	}
+
+	.item-button {
+		font-size: 0.8rem;
+	}
+
+	.card-body {
+		font-size: 0.8rem;
+	}
+
+	#menu-control-wrapper {
+		margin: 0;
+		width: 100%;
+	}
+
+	.menu-category-button {
+		width: 100%;
+	}
+
+	.menu-collapse-wrapper {
+		width: 100%;
+	}
+}

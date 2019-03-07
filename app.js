@@ -1,24 +1,63 @@
+
+const credentials = require('./config/credentials.js');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var favicon = require('serve-favicon');
 
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 
 var app = express();
+// database setup
+var mysql = require("mysql");
+var con = mysql.createConnection(
+{ host: "107.180.4.98",
+  user: credentials.bpdMenuUser,
+  password: credentials.bpdMenuPassword,
+  database: "bpd_menu" 
+});
+
+con.connect(function(err) {
+  if(err){
+    console.log('Error connecting to Db');
+  }
+  console.log('Connection established');
+  
+});
+
+// Keep our conncection from timing out
+
+setInterval(function () {
+    con.query('SELECT 1');
+}, 5000);
+
+// Make our db accessible to our router
+app.use(function(req,res,next){
+    req.con = con;
+    next();
+});
+
+
+
+// Expose Api key to router for hours & location page
+app.use(function(req,res,next) {
+    req.key = credentials.api;
+    next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', mainRouter);
 app.use('/menu', mainRouter);
 app.use('/users', mainRouter);
