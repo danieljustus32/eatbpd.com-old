@@ -156,6 +156,10 @@
 		display: none;
 	}
 
+	#carousel-multi {
+		width: 100%;
+	}
+
 	.item-button {
 		font-size: 0.8rem;
 	}
