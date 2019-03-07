@@ -12,12 +12,11 @@ block content
             | house cooking. We are proud to serve fresh local quality ingredients, such as farm fresh eggs
             | and produce. All of our food is prepared in the healthiest way possible; we only use olive oil
             | for our cooking requirements and soy oil in our deep-fryers.
-          img#bay-view(src="/image/bay-6.jpeg" alt="An image of the Brown's Point Lighthouse")
         div#column-right  
-          div.card 
+          div.card.callout 
             // span(class="yelp-review" data-review-id="EaVPFVw_pprROdlflV2CXw" data-hostname="www.yelp.com")
               img.loading-wheel(src='/image/dual-ring-loading-200px.gif' alt='Loading...')
-          div.card
+          div.card.callout
             // span(class="yelp-review" data-review-id="aL6koj-ROk4-4UNnOUmE5g" data-hostname="www.yelp.com")
               img.loading-wheel(src='/image/dual-ring-loading-200px.gif' alt='Loading...') 
           div.card  
@@ -27,5 +26,57 @@ block content
             div(class="zomato-widget-wrapper" style="width:auto;height:auto;")
               a(href="https://www.zomato.com/tacoma-wa/browns-point-diner-tacoma?utm_source=referral-widget-16725423&utm_medium=review_badge&utm_campaign=widget-business" target="_blank")
                 img(src="https://www.zomato.com/widgets/review_badge?badge_type=rating_large&res_id=16725423&widget_lang=en")
+      // Highlights Carousel
+      #carousel-multi.carousel.slide.carousel-multi-item.v-2(data-ride='carousel')
+        .carousel-inner(role='listbox')
+          // Carousel Item
+          .carousel-item.active
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/burger.jpeg', alt='A fresh, juicy lamb burger')
+                .card-body
+                  h4.card-title.font-weight-bold Fresh, juicy burgers and fries
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/bay-6.png', alt="Brown's Point Lighthouse")
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/music-highlights.png', alt='Live music posters')
+                .card-body
+                  h4.card-title.font-weight-bold Live music @ the SandBAR
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='/image/tiramisu.png', alt='Tiramisu with chocolate dust')
+                .card-body
+                  h4.card-title.font-weight-bold Try our fresh-baked desserts
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (30).jpg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+          // Carousel Item
+          .carousel-item
+            .col-md-6
+              .card.mb-2.carousel-card
+                img.card-img-top(src='https://mdbootstrap.com/img/Photos/Others/img (27).jpg', alt='Card image cap')
+                .card-body
+                  h4.card-title.font-weight-bold Card title
+        // Carousel Controls
+        #controls-bottom
+          a.btn-floating.carousel-left(href='#carousel-multi', data-slide='prev')
+            i.fas.fa-chevron-left
+          a.btn-floating.carousel-right(href='#carousel-multi', data-slide='next')
+            i.fas.fa-chevron-right
+
   link(rel="stylesheet" href="/stylesheets/index.css" type="text/css")
   script(async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript")
