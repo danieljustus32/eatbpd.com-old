@@ -27,8 +27,8 @@ block content
         tr
           td.day Saturday
           td.hours 8am - 8pm
-      form(action='https://www.google.com/maps/dir/?api=1&destination=Browns+Point+Diner+Tacoma+WA&dir_action=navigate')
-        button#directions-button.btn.btn-primary(type='submit' formtarget='_blank') Get Directions
+      #directions
+        a.btn.btn-primary(href='https://www.google.com/maps/dir/?api=1&destination=Browns+Point+Diner+Tacoma+WA&dir_action=navigate' target='_blank') Get Directions
       +google-map-place("ChIJb47bNRlUkFQRhlkA1DvHHh4", key)
 
   link(rel='stylesheet' href='/stylesheets/hours.css' type='text/css')

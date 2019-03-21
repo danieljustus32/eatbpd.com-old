@@ -97,20 +97,6 @@ footer {
 	margin: auto 0;
 }
 
-#hours-table {
-	margin-bottom: 5%;
-	width: 35%;
-}
-
-.day {
-	display: inline;
-}
-
-.hours {
-	display: inline;
-	float: right;
-}
-
 /* Responsive styles */
 
 /* Triggered if going from tablet-size up */
